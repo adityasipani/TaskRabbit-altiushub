@@ -6,7 +6,7 @@ import jwt_decode from 'jwt-decode';
 
 function Login(){
     const validationSchema=Yup.object({
-        email:Yup.string().email('Invalid email').required('Email is required');
+        email:Yup.string().email('Invalid email').required('Email is required'),
         password:Yup.string().required('Password is required'),
 
     });
