@@ -6,8 +6,8 @@ import {register} from '../services/authService';
 function Register(){
     const validationSchema=Yup.object({
         username:Yup.string().required('Username is required'),
-        email:Yup.string().email('Invalid email').required('Email is required');
-        password:Yup.string().min(6,Password must be atleast 6 characters').required('Password is required'),
+        email:Yup.string().email('Invalid email').required('Email is required'),
+        password:Yup.string().min(6,'Password must be atleast 6 characters').required('Password is required'),
 
     });
     const handleRegister=(values)=>{
